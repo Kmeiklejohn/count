@@ -9,10 +9,10 @@ function append(header, ret) {
     document.body.appendChild(p)
   }
 
-
 const singleDigit = [" ", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+const teens = [" ", "eleven", "twelve","thirteen","fourteen","fifthteen","sixteen","seventeen","eighteen","nineteen"];
 const tenName = [" ", "ten", "twenty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
-const hundredName = [" ", "One hundred", "two hundred", "three hundred","four hundred", "five hundred","six hundred", "seven hundred", "eight hundred","nine hundred"];
+const hundredName = [" ", "one hundred", "two hundred", "three hundred","four hundred", "five hundred","six hundred", "seven hundred", "eight hundred","nine hundred"];
 append("count", Countfun())
 function Countfun(){
 let numbers=" ";
@@ -22,10 +22,13 @@ let numbers=" ";
       for(let i=0; i<tenName.length; i++){
 
         for(let n=0; n< singleDigit.length; n++){
-    
-            numbers += hundredName[h]+" "+tenName[i]+" "+singleDigit[n] + ", ";
-        }
-    }}
-
-    return numbers;
+            if(i ==1 && n!==0){
+                numbers += hundredName[h]+ " "+ teens[n];
+            }else
+                numbers += hundredName[h]+" "+tenName[i]+" "+singleDigit[n] + " ";
+        
+    }
+}
+    }
+return numbers;
 }
