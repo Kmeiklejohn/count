@@ -13,6 +13,7 @@ const singleDigit = [" ", "one", "two", "three", "four", "five", "six", "seven",
 const teens = [" ", "eleven", "twelve","thirteen","fourteen","fifthteen","sixteen","seventeen","eighteen","nineteen"];
 const tenName = [" ", "ten", "twenty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
 const hundredName = [" ", "one hundred", "two hundred", "three hundred","four hundred", "five hundred","six hundred", "seven hundred", "eight hundred","nine hundred"];
+const thousand = "one-thousand";
 append("count", Countfun())
 function Countfun(){
 let numbers=" ";
@@ -29,6 +30,6 @@ let numbers=" ";
         
     }
 }
-    }
+    } numbers += thousand;
 return numbers;
 }
